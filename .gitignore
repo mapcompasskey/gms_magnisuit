@@ -1,0 +1,8 @@
+*.lnk
+*.ods
+*.ods#
+.DS_Store
+Thumbs.db
+Desktop.ini
+git.txt
+notes.txt
