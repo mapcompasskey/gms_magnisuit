@@ -59,40 +59,21 @@ if ( ! pilot_is_player)
             pilot_is_player = true;
             obj_player.is_pilot = true;
             
-// get the desired game size
-var aspect_ratio = VIEW_WIDTH / VIEW_HEIGHT;
-
-// get the window's actual width and height
-var width = window_get_width();
-var height = window_get_height();
-
-// if portrait mode
-if (aspect_ratio < 0)
-{
-    width = width / aspect_ratio;
+            scr_room_resize_view_2(GAME_SCALE / 4);
+        }
+    }
 }
-// else, if landscape mode
 else
 {
-    height = height / aspect_ratio;
-}
-
-// scale the size of the Room's View/Port
-var scale_width = round(width / (GAME_SCALE / 4));
-var scale_height = round(height / (GAME_SCALE / 4));
-
-// resize port
-view_wport[0] = scale_width;
-view_hport[0] = scale_height;
-
-// resize view
-view_wview[0] = scale_width;
-view_hview[0] = scale_height;
-
-// resize application surface
-surface_resize(application_surface, scale_width, scale_height);
-            
-        }
+    if (keyboard_check_released(vk_down))
+    {
+        obj_player.x = x;
+        obj_player.y = y;
+        
+        pilot_is_player = false;
+        obj_player.is_pilot = false;
+        
+        scr_room_resize_view_2(GAME_SCALE);
     }
 }
 
