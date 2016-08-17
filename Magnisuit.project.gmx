@@ -98,7 +98,9 @@
         <scripts name="Mech01">
           <script>scripts\scr_mech01_create.gml</script>
           <script>scripts\scr_mech01_step.gml</script>
+          <script>scripts\scr_mech01_is_walking.gml</script>
           <script>scripts\scr_mech01_end_step.gml</script>
+          <script>scripts\scr_mech01_draw.gml</script>
         </scripts>
       </scripts>
       <scripts name="Misc">

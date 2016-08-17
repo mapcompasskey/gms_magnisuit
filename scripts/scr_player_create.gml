@@ -33,6 +33,8 @@ jumpsmax = 2;
 
 on_ladder = false;
 
+is_pilot = false;
+
 // inputs
 key_left = false
 key_right = false;

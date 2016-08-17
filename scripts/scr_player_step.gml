@@ -7,12 +7,31 @@
  */
 
 // get the player's input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_down = keyboard_check(vk_down);
-key_jump_pressed = keyboard_check_pressed(ord("X")); // vk_space
-key_jump_released = keyboard_check_released(ord("X")); // vk_space
-key_attack_pressed = keyboard_check_released(ord("Z"));
+//key_left = keyboard_check(vk_left);
+//key_right = keyboard_check(vk_right);
+//key_down = keyboard_check(vk_down);
+//key_jump_pressed = keyboard_check_pressed(ord("X")); // vk_space
+//key_jump_released = keyboard_check_released(ord("X")); // vk_space
+//key_attack_pressed = keyboard_check_released(ord("Z"));
+
+if ( ! is_pilot)
+{
+    key_left = keyboard_check(vk_left);
+    key_right = keyboard_check(vk_right);
+    key_down = keyboard_check(vk_down);
+    key_jump_pressed = keyboard_check_pressed(ord("X"));
+    key_jump_released = keyboard_check_released(ord("X"));
+    key_attack_pressed = keyboard_check_released(ord("Z"));
+}
+else
+{
+    key_left = false;
+    key_right = false;
+    key_down = false;
+    key_jump_pressed = false;
+    key_jump_released = false;
+    key_attack_pressed = false;
+}
 
 // is object standing on a wall
 grounded = place_meeting(x, y + 1, obj_wall);

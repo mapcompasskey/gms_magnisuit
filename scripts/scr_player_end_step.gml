@@ -46,5 +46,8 @@ scr_entity_keep_in_room();
  */
 
 // move towards the player
-scr_camera_update(x, y, true);
+if ( ! is_pilot)
+{
+    scr_camera_update(x, y, true);
+}
 

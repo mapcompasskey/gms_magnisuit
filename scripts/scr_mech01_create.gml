@@ -7,7 +7,7 @@
  */
 
 scr_entity_movement_vars();
-speed_x = 3;
+speed_x = 6;
 speed_y = 4;
 max_velocity_x = speed_x * 2;
 max_velocity_y = speed_y * 2;
@@ -32,6 +32,8 @@ jumpsmax = 2;
 //attack_cooldown_timer = 0;
 
 pilot_is_player = false;
+action_text = 'PRESS UP'
+show_action_text = false;
 
 // inputs
 key_left = false

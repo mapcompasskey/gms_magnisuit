@@ -36,7 +36,8 @@ scr_entity_keep_in_room();
  */
 
 // move towards this object
-if (pilot_is_player) {
+if (pilot_is_player)
+{
     scr_camera_update(x, y, true);
 }
 
